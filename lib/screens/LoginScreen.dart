@@ -1,4 +1,4 @@
-import 'package:autonoma1/screens/ProductosScreen.dart';
+import 'package:autonoma1/screens/MedicinasScreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -100,7 +100,7 @@ Future<void> login(context) async {
 /////////////////////////////////////////////////////////
 Navigator.push(context, 
         MaterialPageRoute(builder: 
-        (context)=> Productos()
+        (context)=> Medicinas()
         )
         );
 

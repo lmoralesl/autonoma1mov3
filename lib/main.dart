@@ -1,3 +1,4 @@
+import 'package:autonoma1/screens/FormularioScreen.dart';
 import 'package:autonoma1/screens/LoginScreen.dart';
 import 'package:autonoma1/screens/RegistroScreen.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -34,7 +35,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Title'),
+        title: const Text('FARMACIA'),
       ),
       body:
      
@@ -44,20 +45,23 @@ class _HomeState extends State<Home> {
 }
 
 Widget Cuerpo (context){
-  return(
-    Column(
-      children: <Widget>[
-        Text("WELCOME"),
-        BotonLogin(context),
-        BotonRegistro(context),
-        BotonFormulario(),
-      ],
-    )
+  return Center(
+    child: (
+      Column(
+        children: <Widget>[
+          Text("WELCOME FARMACIA"),
+          BotonLogin(context),
+          BotonRegistro(context),
+          BotonFormulario(context),
+        ],
+      )
+    ),
   );
 }
 
 Widget BotonLogin(context){
   return(
+    
     FilledButton(
       onPressed: (){
         Navigator.push(context, 
@@ -85,9 +89,15 @@ Widget BotonRegistro(context){
   );
 }
 
-Widget BotonFormulario(){
+Widget BotonFormulario(context){
   return(
-    ElevatedButton(onPressed: (){},
+    ElevatedButton(onPressed: (){
+      Navigator.push(context, 
+        MaterialPageRoute(builder: 
+        (context)=> Formulario()
+        )
+        );
+    },
      child: Text("ir a Formulrio"))
   );
 }

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 
 void main(){
-  runApp(Productos());
+  runApp(Medicinas());
 }
 
-class Productos extends StatelessWidget {
-  const Productos({super.key});
+class Medicinas extends StatelessWidget {
+  const Medicinas({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('PRODUCTOS'),
+        title: const Text('MEDICINAS'),
       ),
       body: Container(),
     );
